@@ -6,11 +6,14 @@ import (
 
 	_ "github.com/coredns/coredns/plugin/forward"
 	_ "github.com/coredns/coredns/plugin/log"
+
+	_ "github.com/satishbabariya/coredns-plugins/info"
 )
 
 func init() {
 	dnsserver.Directives = []string{
 		"log",
+		"info",
 		"forward",
 	}
 }
